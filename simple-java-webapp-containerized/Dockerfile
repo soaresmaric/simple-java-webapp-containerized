@@ -1,7 +1,8 @@
-FROM openjdk:11-jre-slim
+FROM openjdk:17-jdk-alpine
 
 WORKDIR /app
 
-COPY target/demo-0.0.1-SNAPSHOT.jar .
+COPY target/spring-boot-junit-example.jar /app/spring-boot-junit-example.jar
 
-CMD ["java", "-jar", "demo-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "spring-boot-junit-example.jar"]
+
