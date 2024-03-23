@@ -18,9 +18,7 @@
   </parent>
 
   <properties>
-    <java.version>11</java.version>
-    <maven.compiler.source>${java.version}</maven.compiler.source>
-    <maven.compiler.target>${java.version}</maven.compiler.target>
+    <java.version>17</java.version> <!-- Correção: Use uma versão válida do Java -->
   </properties>
 
   <dependencies>
@@ -32,7 +30,7 @@
 
     <!-- JUnit Jupiter API for writing tests -->
     <dependency>
-      <groupId>org.junit.jupiter</groupId>
+      <groupId>org.junit.jupiter</groupId> <!-- Correção: Use junit-jupiter para JUnit 5 -->
       <artifactId>junit-jupiter-api</artifactId>
       <version>5.8.1</version>
       <scope>test</scope>
@@ -40,23 +38,20 @@
 
     <!-- JUnit Jupiter Engine for running tests -->
     <dependency>
-      <groupId>org.junit.jupiter</groupId>
+      <groupId>org.junit.jupiter</groupId> <!-- Correção: Use junit-jupiter para JUnit 5 -->
       <artifactId>junit-jupiter-engine</artifactId>
       <version>5.8.1</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- Lombok -->
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>RELEASE</version>
-      <scope>test</scope>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.22</version>
+      <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>RELEASE</version>
-      <scope>test</scope>
-    </dependency>
+
   </dependencies>
 
   <build>
